@@ -1,0 +1,871 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Maheen Akram — Computer Science Student, Frontend Web Developer & Android App Developer."
+    />
+    <meta
+      name="keywords"
+      content="Maheen Akram, Frontend Developer, Android Developer, Portfolio, Computer Science"
+    />
+    <title>Maheen Akram — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.svg" />
+  </head>
+  <body>
+    <!-- Cursor glow -->
+    <div id="cursor-glow" aria-hidden="true"></div>
+
+    <!-- Loading screen -->
+    <div id="loader" aria-hidden="true">
+      <div class="loader-inner">
+        <div class="loader-ring"></div>
+        <span class="loader-text">Maheen Akram</span>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" aria-label="Primary">
+      <a href="#" class="nav-brand" aria-label="Maheen Akram Home">MA.</a>
+      <ul class="nav-links" role="menubar">
+        <li><a href="#about" role="menuitem">About</a></li>
+        <li><a href="#skills" role="menuitem">Skills</a></li>
+        <li><a href="#projects" role="menuitem">Projects</a></li>
+        <li><a href="#certifications" role="menuitem">Certs</a></li>
+        <li><a href="#education" role="menuitem">Education</a></li>
+        <li><a href="#experience" role="menuitem">Experience</a></li>
+        <li><a href="#contact" role="menuitem">Contact</a></li>
+      </ul>
+      <button
+        id="nav-toggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="nav-mobile"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div id="nav-mobile" class="nav-mobile" aria-hidden="true">
+      <ul role="menubar">
+        <li><a href="#about" role="menuitem">About</a></li>
+        <li><a href="#skills" role="menuitem">Skills</a></li>
+        <li><a href="#projects" role="menuitem">Projects</a></li>
+        <li><a href="#certifications" role="menuitem">Certs</a></li>
+        <li><a href="#education" role="menuitem">Education</a></li>
+        <li><a href="#experience" role="menuitem">Experience</a></li>
+        <li><a href="#contact" role="menuitem">Contact</a></li>
+      </ul>
+    </div>
+
+    <main>
+      <!-- Hero -->
+      <section id="hero" aria-label="Introduction">
+        <canvas id="particle-canvas" aria-hidden="true"></canvas>
+        <div class="hero-background-blobs" aria-hidden="true">
+          <div class="blob blob-1"></div>
+          <div class="blob blob-2"></div>
+          <div class="blob blob-3"></div>
+        </div>
+
+        <div class="hero-content">
+          <div class="hero-badge reveal" data-reveal>
+            <span class="dot"></span>
+            <span>Computer Science Student</span>
+          </div>
+
+          <h1 class="hero-title reveal" data-reveal>
+            <span class="line">Maheen Akram</span>
+          </h1>
+
+          <div class="hero-subtitle reveal" data-reveal>
+            <span id="typing-text" aria-live="polite"></span
+            ><span class="cursor" aria-hidden="true">|</span>
+          </div>
+
+          <p class="hero-desc reveal" data-reveal>
+            I build beautiful, high-performance web interfaces and intelligent
+            Android applications. Passionate about AI, responsive design, and
+            clean code that solves real problems.
+          </p>
+
+          <div class="hero-cta reveal" data-reveal>
+            <a
+              href="Maheen_Akram_Resume.pdf"
+               download="Maheen_Akram_Resume.pdf"
+              class="btn btn-primary"
+            >
+              <span>Download Resume</span>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+            </a>
+            <a href="#projects" class="btn btn-glass" aria-label="View Projects"
+              >View Projects</a
+            >
+            <a href="#contact" class="btn btn-glass" aria-label="Contact Me"
+              >Contact Me</a
+            >
+          </div>
+        </div>
+
+        <div class="scroll-indicator" aria-hidden="true">
+          <div class="scroll-line"></div>
+          <span>Scroll</span>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" aria-label="About Me">
+        <div class="container narrow">
+          <div class="section-header reveal" data-reveal>
+            <span class="section-label">About</span>
+            <h2>About Me</h2>
+          </div>
+          <div class="about-grid reveal" data-reveal>
+            <div class="glass-card about-card">
+              <div class="about-portrait" aria-label="Portrait of Maheen Akram">
+                <img src="./pfp/Maheen.png" alt="Maheen Akram portrait" loading="lazy" />
+              </div>
+              <h3>Maheen Akram</h3>
+              <p class="about-role">CS Student • Frontend & Android Dev</p>
+              <div class="about-stats">
+                <div><strong>2+</strong><span>Years Coding</span></div>
+                <div><strong>8</strong><span>Certifications</span></div>
+                <div><strong>4</strong><span>Projects</span></div>
+              </div>
+            </div>
+
+            <div class="glass-card about-text">
+              <h3>Passionate About Building the Future</h3>
+              <p>
+                As a Computer Science student, I am driven by the intersection
+                of design and engineering. I specialize in crafting responsive
+                web interfaces using modern CSS and JavaScript, and developing
+                native Android applications with Java, Firebase, and XML.
+              </p>
+              <p>
+                My interest in Generative AI pushes me to explore how machine
+                learning can enhance user experiences — from intelligent prompts
+                to adaptive interfaces. I believe code should be clean,
+                accessible, and beautiful.
+              </p>
+              <div class="tags">
+                <span>Frontend</span><span>Android</span><span>AI</span
+                ><span>UI/UX</span><span>Firebase</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" aria-label="Skills">
+        <div class="container">
+          <div class="section-header reveal" data-reveal>
+            <span class="section-label">Skills</span>
+            <h2>Technical Stack</h2>
+          </div>
+          <div class="skills-grid reveal" data-reveal>
+            <article class="skill-card glass-card" data-skill>
+              <div class="skill-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                  />
+                </svg>
+              </div>
+              <h3>Frontend</h3>
+              <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Bootstrap</li>
+                <li>Tailwind CSS</li>
+              </ul>
+            </article>
+            <article class="skill-card glass-card" data-skill>
+              <div class="skill-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <rect x="4" y="4" width="16" height="16" rx="2" />
+                  <path d="M9 9h6v6H9z" />
+                </svg>
+              </div>
+              <h3>Programming</h3>
+              <ul>
+                <li>Java</li>
+                <li>Python</li>
+                <li>OOPs</li>
+                <li>C</li>
+                <li>C++</li>
+              </ul>
+            </article>
+            <article class="skill-card glass-card" data-skill>
+              <div class="skill-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                  <line x1="12" y1="18" x2="12.01" y2="18" />
+                </svg>
+              </div>
+              <h3>Mobile App Development</h3>
+              <ul>
+                <li>Android Development</li>
+                <li>Firebase</li>
+              </ul>
+            </article>
+            <article class="skill-card glass-card" data-skill>
+              <div class="skill-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <circle cx="12" cy="12" r="3" />
+                  <path
+                    d="M12 2v4m0 12v4M2 12h4m12 0h4M4.93 4.93l2.83 2.83m7.04 7.04l2.83 2.83M4.93 19.07l2.83-2.83m7.04-7.04l2.83-2.83"
+                  />
+                </svg>
+              </div>
+              <h3>AI</h3>
+              <ul>
+                <li>Generative AI</li>
+                <li>Microsoft Copilot</li>
+                <li>Prompt Engineering</li>
+              </ul>
+            </article>
+            <article class="skill-card glass-card" data-skill>
+              <div class="skill-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                  />
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                  <line x1="12" y1="22.08" x2="12" y2="12" />
+                </svg>
+              </div>
+              <h3>Tools</h3>
+              <ul>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>Android Studio</li>
+                <li>VS Code</li>
+                <li>Figma</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" aria-label="Featured Projects">
+        <div class="container">
+          <div class="section-header reveal" data-reveal>
+            <span class="section-label">Work</span>
+            <h2>Featured Projects</h2>
+          </div>
+          <div class="projects-grid reveal" data-reveal>
+            <article class="project-card glass-card" data-project>
+              <div class="project-visual" aria-label="Journal App preview">
+                <img
+                  src="./project_ss/journalApp.png"
+                  alt="Journal App"
+                  loading="lazy"
+                />
+                <div class="project-tags">
+                  <span>Android</span><span>Java</span><span>Firebase</span>
+                </div>
+              </div>
+              <div class="project-body">
+                <h3>Journal App</h3>
+                <p>
+                  A personal journaling application for Android built with Java,
+                  Firebase Authentication, and Firestore. Features responsive
+                  XML UI, real-time sync, and a clean modern design.
+                </p>
+                <div class="project-meta">
+                  <span>Firebase Auth</span>
+                  <span>Firestore DB</span>
+                  <span>XML UI</span>
+                </div>
+                <a
+                  href="https://github.com/MaheenAkram/JournalApp"
+                  class="btn btn-glass btn-small"
+                  aria-label="View Journal App on GitHub"
+                  >GitHub</a
+                >
+              </div>
+            </article>
+
+            <article class="project-card glass-card" data-project>
+              <div class="project-visual" aria-label="E-Commerce preview">
+                <img
+                  src="./project_ss/E-commerce Project.jpeg"
+                  alt="Modern E-Commerce Website"
+                  loading="lazy"
+                />
+                <div class="project-tags">
+                  <span>HTML</span><span>CSS</span><span>JS</span>
+                </div>
+              </div>
+              <div class="project-body">
+                <h3>Modern E-Commerce Website</h3>
+                <p>
+                  A responsive e-commerce frontend with dynamic product
+                  listings, a working shopping cart, smooth animations, and a
+                  polished modern UI built with vanilla HTML, CSS, and
+                  JavaScript.
+                </p>
+                <div class="project-meta">
+                  <span>Responsive</span>
+                  <span>Shopping Cart</span>
+                  <span>Modern UI</span>
+                </div>
+                <div class="project-actions">
+                  <a
+                    href="https://maheenakram.github.io/aura-ecommerce/"
+                    class="btn btn-primary btn-small"
+                    aria-label="Live Demo"
+                    >Live Demo</a
+                  >
+                  <a
+                    href="https://github.com/MaheenAkram/aura-ecommerce"
+                    class="btn btn-glass btn-small"
+                    aria-label="View on GitHub"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section id="certifications" aria-label="Certifications">
+        <div class="container">
+          <div class="section-header reveal" data-reveal>
+            <span class="section-label">Credentials</span>
+            <h2>Certifications</h2>
+          </div>
+          <div class="certs-grid reveal" data-reveal>
+            <a
+              href="certificates/Career Essentials.jpeg"
+              class="cert-card glass-card"
+              aria-label="Career Essentials in Generative AI"
+            >
+              <div class="cert-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <h3>Career Essentials in Generative AI</h3>
+              <p>Microsoft &amp; LinkedIn</p>
+            </a>
+            <a
+              href="certificates/Career Essentials.jpeg"
+              class="cert-card glass-card"
+              aria-label="Microsoft Copilot"
+            >
+              <div class="cert-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                  <polyline points="2 17 12 22 22 17" />
+                  <polyline points="2 12 12 17 22 12" />
+                </svg>
+              </div>
+              <h3>Microsoft Copilot</h3>
+              <p>Microsoft &amp; LinkedIn</p>
+            </a>
+            <a
+              href="certificates/AI Literacy.jpeg"
+              class="cert-card glass-card"
+              aria-label="AI Literacy"
+            >
+              <div class="cert-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                </svg>
+              </div>
+              <h3>AI Literacy For Everyone</h3>
+              <p>Microsoft</p>
+            </a>
+            <a
+              href="certificates/Ethics Of Gen-AI.jpeg"
+              class="cert-card glass-card"
+              aria-label="Ethics in the Age of Generative AI"
+            >
+              <div class="cert-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 16a1 1 0 1 1 1-1 1 1 0 0 1-1 1zm0-3V7"
+                  />
+                </svg>
+              </div>
+              <h3>Ethics in the Age of Generative AI</h3>
+              <p>Microsoft</p>
+            </a>
+            <a
+              href="certificates/Deloitte Job Simulation.png"
+              class="cert-card glass-card"
+              aria-label="Prompt Engineering"
+            >
+              <div class="cert-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <rect x="2" y="7" width="20" height="13" rx="2" />
+                  <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" />
+                </svg>
+              </div>
+              <h3>Technology Job Simulation</h3>
+              <p>Deloitte</p>
+            </a>
+            <a
+              href="certificates/Frontened Developer.png"
+              class="cert-card glass-card"
+              aria-label="Responsible AI"
+            >
+              <div class="cert-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <polyline points="8 7 3 12 8 17" />
+                  <polyline points="16 7 21 12 16 17" />
+                  <line x1="13" y1="4" x2="11" y2="20" />
+                </svg>
+              </div>
+              <h3>Frontend Web Developer</h3>
+              <p>Global Institute</p>
+            </a>
+            <a
+              href="certificates/MAD certificate.jpeg"
+              class="cert-card glass-card"
+              aria-label="Responsible AI"
+            >
+              <div class="cert-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                >
+                  <rect x="7" y="2" width="10" height="20" rx="2" />
+                  <circle cx="12" cy="18" r="0.8" />
+                  <line x1="10" y1="5" x2="14" y2="5" />
+                </svg>
+              </div>
+              <h3>Android App Developer (International Level)</h3>
+              <p>Navtacc</p>
+            </a>
+            <!-- <a
+              href="certificates/IELETS"
+              class="cert-card glass-card"
+              aria-label="Responsible AI"
+            >
+              <div class="cert-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M3 12h18" />
+                  <path d="M12 3a15 15 0 0 1 0 18" />
+                  <path d="M12 3a15 15 0 0 0 0 18" />
+                </svg>
+              </div>
+              <h3>
+                IELETS <br />
+                (International Level)
+              </h3>
+              <p>Navtacc</p>
+            </a> -->
+            <a
+              href="certificates/python essential1.jpeg"
+              class="cert-card glass-card"
+              aria-label="Responsible AI"
+            >
+              <div class="cert-icon" aria-hidden="true">
+                <svg viewBox="0 0 128 128" fill="currentColor">
+                  <path
+                    d="M63.95 0C31.66 0 33.68 14.01 33.68 14.01l.04 14.51h30.8v4.36H21.5S0 30.4 0 63.95c0 33.56 18.77 32.39 18.77 32.39h11.2V80.62s-.6-18.77 18.47-18.77h31.8s17.87.29 17.87-17.27V17.87S100.83 0 63.95 0zM46.98 10.29a5.75 5.75 0 110 11.5 5.75 5.75 0 010-11.5z"
+                  />
+                  <path
+                    d="M64.05 128c32.29 0 30.27-14.01 30.27-14.01l-.04-14.51h-30.8v-4.36h43.02S128 97.6 128 64.05c0-33.56-18.77-32.39-18.77-32.39h-11.2v15.72s.6 18.77-18.47 18.77h-31.8S29.9 65.86 29.9 83.42v26.71S27.17 128 64.05 128zm16.97-10.29a5.75 5.75 0 110-11.5 5.75 5.75 0 010 11.5z"
+                  />
+                </svg>
+              </div>
+              <h3>Python Essentials 1</h3>
+              <p>Cisco Networking Academy</p>
+            </a>
+            <a
+              href="certificates/python essential2.jpeg"
+              class="cert-card glass-card"
+              aria-label="Responsible AI"
+            >
+              <div class="cert-icon" aria-hidden="true">
+                <svg viewBox="0 0 128 128" fill="currentColor">
+                  <path
+                    d="M63.95 0C31.66 0 33.68 14.01 33.68 14.01l.04 14.51h30.8v4.36H21.5S0 30.4 0 63.95c0 33.56 18.77 32.39 18.77 32.39h11.2V80.62s-.6-18.77 18.47-18.77h31.8s17.87.29 17.87-17.27V17.87S100.83 0 63.95 0zM46.98 10.29a5.75 5.75 0 110 11.5 5.75 5.75 0 010-11.5z"
+                  />
+                  <path
+                    d="M64.05 128c32.29 0 30.27-14.01 30.27-14.01l-.04-14.51h-30.8v-4.36h43.02S128 97.6 128 64.05c0-33.56-18.77-32.39-18.77-32.39h-11.2v15.72s.6 18.77-18.47 18.77h-31.8S29.9 65.86 29.9 83.42v26.71S27.17 128 64.05 128zm16.97-10.29a5.75 5.75 0 110-11.5 5.75 5.75 0 010 11.5z"
+                  />
+                </svg>
+              </div>
+              <h3>Python Essentials 2</h3>
+              <p>Cisco Networking Academy</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section id="education" aria-label="Education">
+        <div class="container narrow">
+          <div class="section-header reveal" data-reveal>
+            <span class="section-label">Education</span>
+            <h2>Education</h2>
+          </div>
+          <div class="glass-card education-card reveal" data-reveal>
+            <div class="edu-header">
+              <div class="edu-badge">BS</div>
+              <div>
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p class="edu-school">
+                  Government College University Of Faisalabad (GCUF)
+                </p>
+              </div>
+            </div>
+            <div class="edu-body">
+              <p>
+                Currently pursuing a Bachelor of Science in Computer Science
+                with a focus on software engineering, algorithms, and modern web
+                technologies. Active in student projects, coding communities,
+                and AI research groups.
+              </p>
+            </div>
+            <div class="progress-bars" aria-label="Course progress">
+              <div>
+                <span>Web Development</span>
+                <div class="bar"><div class="fill" data-width="92"></div></div>
+              </div>
+              <div>
+                <span>Mobile Development</span>
+                <div class="bar"><div class="fill" data-width="85"></div></div>
+              </div>
+              <div>
+                <span>AI & Data</span>
+                <div class="bar"><div class="fill" data-width="78"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" aria-label="Experience">
+        <div class="container narrow">
+          <div class="section-header reveal" data-reveal>
+            <span class="section-label">Experience</span>
+            <h2>Experience</h2>
+          </div>
+          <div class="glass-card experience-card reveal" data-reveal>
+            <div class="exp-header">
+              <div class="exp-logo" aria-label="Deloitte">D</div>
+              <div>
+                <h3>Deloitte Technology Virtual Experience</h3>
+                <p class="exp-sub">Forage • Virtual</p>
+              </div>
+            </div>
+            <ul class="exp-list">
+              <li>
+                Completed a virtual experience program focused on technology
+                consulting and digital transformation.
+              </li>
+              <li>
+                Analyzed business technology challenges and proposed modern
+                software solutions.
+              </li>
+              <li>
+                Collaborated with simulated cross-functional teams to deliver a
+                technology strategy presentation.
+              </li>
+            </ul>
+          </div>
+          <div class="glass-card experience-card reveal" data-reveal>
+            <div class="exp-header">
+              <div class="exp-logo" aria-label="Deloitte">D</div>
+              <div>
+                <h3>Frontend web Developer Intern</h3>
+                <p class="exp-sub">Skywaves • Unpaid Internship</p>
+              </div>
+            </div>
+            <ul class="exp-list">
+              <li>
+                Developed responsive and user-friendly websites using HTML, CSS,
+                JavaScript, and Tailwind CSS.
+              </li>
+              <li>
+                Worked with the development team to build modern, responsive,
+                and visually appealing web interfaces.
+              </li>
+              <li>
+                Improved frontend performance by writing clean, reusable, and
+                maintainable code.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" aria-label="Contact">
+        <div class="container narrow">
+          <div class="section-header reveal" data-reveal>
+            <span class="section-label">Contact</span>
+            <h2>Let's Connect</h2>
+          </div>
+          <div class="contact-grid reveal" data-reveal>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=maheenakram983983@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-card glass-card"
+              aria-label="Email Maheen Akram"
+            >
+              <div class="contact-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="M22 7l-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+              </div>
+              <h3>Email</h3>
+              <p>maheen.akram@email.com</p>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/maheen-akram-dvlpr/"
+              class="contact-card glass-card"
+              aria-label="LinkedIn Profile"
+            >
+              <!-- <a href="#" class="contact-card glass-card" aria-label="LinkedIn Profile"> -->
+              <div class="contact-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </div>
+              <h3>LinkedIn</h3>
+              <p>linkedin.com/in/maheenakram</p>
+            </a>
+
+            <!-- <a href="#" class="contact-card glass-card" aria-label="GitHub Profile"> -->
+            <a
+              href="https://github.com/MaheenAkram"
+              class="contact-card glass-card"
+              aria-label="GitHub Profile"
+            >
+              <div class="contact-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                  />
+                </svg>
+              </div>
+              <h3>GitHub</h3>
+              <p>github.com/maheenakram</p>
+            </a>
+            <a
+              href="https://maps.google.com/?q=Sheikhupura,Pakistan"
+              class="contact-card glass-card"
+              aria-label="Location"
+            >
+              <div class="contact-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <h3>Location</h3>
+              <p>Pakistan</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer aria-label="Footer">
+      <div class="container">
+        <div class="footer-inner">
+          <a href="#" class="footer-brand" aria-label="Maheen Akram Home"
+            >MA.</a
+          >
+          <p>© 2025 Maheen Akram. Built with passion and precision.</p>
+          <div class="socials" aria-label="Social links">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=maheenakram983983@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="E-mail"
+              title="E-mail"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="M22 7l-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/maheen-akram-dvlpr/"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a
+              href="https://github.com/MaheenAkram"
+              aria-label="GitHub"
+              title="GitHub"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://maps.google.com/?q=Sheikhupura,Pakistan"
+              aria-label="Location"
+              title="Location"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </a>
+            <!-- <a href="#" aria-label="Twitter" title="Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 12 8v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a> -->
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <!-- <script src="/script.js"></script> -->
+  </body>
+</html>
